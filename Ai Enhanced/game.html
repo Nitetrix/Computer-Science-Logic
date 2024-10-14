@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Logic Puzzle Game</h1>
+
+    <!-- Start button to initiate the game -->
+    <button id="startButton" onclick="startGame()">Start Game</button>
+
+    <!-- Display the score and the countdown timer -->
+    <div class="game-info" style="display: none;">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time Remaining: <span id="timeRemaining">60</span> seconds</p>
+    </div>
+
+    <div class="variable-control" style="display: none;">
+        <p>Variable A: <span id="valueA" class="result">false</span></p>
+        <p>Variable B: <span id="valueB" class="result">false</span></p>
+    </div>
+
+    <h2 id="puzzleSection" style="display: none;">Current Puzzle:</h2>
+    <p id="puzzleQuestion" style="display: none;">What is the result of A AND B?</p>
+
+    <!-- Buttons for answering True or False -->
+    <div id="answerButtons" style="display: none;">
+        <button onclick="checkAnswer(true)">True</button>
+        <button onclick="checkAnswer(false)">False</button>
+    </div>
+
+    <p id="feedback"></p>
+
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+<button id="homeButton" onclick="goToHomePage()">Back to Home Page</button>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Logical Operations and Truth Table</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Interactive Logical Operations and Truth Table</h1>
+
+    <!-- Button to start the game -->
+    <button onclick="window.location.href='game.html'">Start Game</button>
+
+    <!-- Section for controlling Variable A -->
+    <div class="container">
+        <h2>Set Your Variables</h2>
+        <div class="variable-control">
+            <p>Variable A: <span id="valueA" class="result">false</span></p>
+            <button onclick="setVariable('A', true)">Set A True</button>
+            <button onclick="setVariable('A', false)">Set A False</button>
+        </div>
+        <div class="variable-control">
+            <p>Variable B: <span id="valueB" class="result">false</span></p>
+            <button onclick="setVariable('B', true)">Set B True</button>
+            <button onclick="setVariable('B', false)">Set B False</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Logical Operations for Variables</h2>
+        <div class="operation-control">
+            <button onclick="performOperation('AND')">A AND B</button>
+            <button onclick="performOperation('OR')">A OR B</button>
+            <button onclick="performOperation('NOT_A')">NOT A</button>
+            <button onclick="performOperation('NOT_B')">NOT B</button>
+            <p id="operationResult" class="result"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Truth Table for Variables</h2>
+        <div class="truth-table-container">
+            <button onclick="generateTruthTableRow()">Generate Truth Table Row</button>
+            <table id="truthTable">
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>A AND B</th>
+                    <th>A OR B</th>
+                    <th>A AND NOT B</th>
+                    <th>A OR NOT B</th>
+                    <th>(A OR B) AND NOT(A AND B)</th>
+                    <th>(A AND B) OR NOT(A OR B)</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

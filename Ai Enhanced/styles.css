@@ -1,0 +1,139 @@
+/* Basic styles for the page layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* Styles for the headings */
+h1, h2 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Container styling for each section of the webpage */
+.container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Styling for the buttons to make them look nicer */
+button {
+    margin: 8px;
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth color change and scale effect */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Light shadow for a pop-out effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly larger button on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slightly smaller when pressed */
+}
+
+/* Enhanced leaderboard styling */
+#leaderboard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+#leaderboard li {
+    padding: 10px;
+    background: #e3e3e3;
+    margin: 6px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect to leaderboard items */
+}
+
+#leaderboard li:nth-child(odd) {
+    background: #d3d3d3;
+}
+
+/* Style for the table to make it more visually appealing */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    background-color: #f4f7fb; /* Light background for table cells */
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for contrast */
+}
+
+/* Home button styling for a cleaner look */
+#homeButton {
+    margin: 15px 0;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth color change and scale effect */
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2); /* Light shadow for a pop-out effect */
+    font-size: 16px;
+}
+
+#homeButton:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly larger button on hover */
+}
+
+#homeButton:active {
+    transform: scale(0.98); /* Slightly smaller when pressed */
+}
+
+/* Style for the result text to make it stand out */
+.result {
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    button, #homeButton {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
